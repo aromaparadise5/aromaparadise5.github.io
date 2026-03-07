@@ -4,60 +4,25 @@
 <title>Our Scents</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.candle{
-display:flex;
-align-items:center;
-gap:40px;
-margin:60px 0;
-opacity:0;
-transform:translateY(40px);
-transition:0.8s;
-}
+body {font-family:Arial; background:#dff4ff; margin:0; padding:20px;}
+nav {display:flex; gap:20px; padding:15px; background:white; position:sticky; top:0; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+nav a {text-decoration:none; font-weight:bold; color:black;}
+#cart-count {font-weight:bold; color:#00aaff;}
 
-.candle.show{
-opacity:1;
-transform:translateY(0);
-}
+.candle{display:flex; align-items:center; gap:30px; margin:60px 0; opacity:0; transform:translateY(40px); transition:0.8s;}
+.candle.show{opacity:1; transform:translateY(0);}
+.candle.reverse{flex-direction:row-reverse;}
+.candle img{width:300px; border-radius:10px;}
+.candle div{max-width:400px;}
+.candle h2{margin-top:0;}
+.candle a{display:inline-block; margin-top:10px; background:#00aaff; color:white; padding:8px 12px; border-radius:6px; text-decoration:none;}
 
-.candle.reverse{
-flex-direction:row-reverse;
-}
-
-.candle img{
-width:300px;
-border-radius:10px;
-}
-
-.best-seller{
-display:flex;
-gap:20px;
-margin-top:50px;
-flex-wrap:wrap;
-}
-
-.best-seller .card{
-flex:1;
-min-width:200px;
-background:white;
-padding:15px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.best-seller .card:hover{
-transform:translateY(-5px);
-}
-
-.best-seller img{
-width:100%;
-border-radius:10px;
-}
-
+.best-seller{display:flex; gap:20px; margin-top:50px; flex-wrap:wrap;}
+.best-seller .card{flex:1; min-width:200px; background:white; padding:15px; border-radius:10px; text-align:center; box-shadow:0 5px 10px rgba(0,0,0,0.1); transition:0.3s;}
+.best-seller .card:hover{transform:translateY(-5px);}
+.best-seller img{width:100%; border-radius:10px;}
 </style>
 </head>
-
 <body>
 
 <nav>
@@ -69,9 +34,9 @@ border-radius:10px;
 <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
 </nav>
 
-<div class="container">
+<h1 style="text-align:center;">Our Scents</h1>
 
-<h1>Our Scents</h1>
+<div class="container">
 
 <!-- Zig-Zag Candles -->
 <div class="candle">
@@ -79,7 +44,8 @@ border-radius:10px;
 <div>
 <h2>Warm Vanilla</h2>
 <p>A cozy, sweet vanilla fragrance perfect for relaxing evenings or studying. Fills your space with comfort and warmth.</p>
-<a href="products/vanilla.html">Shop Now</a>
+<button onclick="addToCart('Warm Vanilla',10)">Add To Cart</button>
+<a href="products/vanilla.html">More Info</a>
 </div>
 </div>
 
@@ -88,7 +54,8 @@ border-radius:10px;
 <div>
 <h2>Lavender Calm</h2>
 <p>A soothing lavender scent that helps you relax and reduce stress. Perfect for bedrooms, study time, or winding down.</p>
-<a href="products/lavender.html">Shop Now</a>
+<button onclick="addToCart('Lavender Calm',10)">Add To Cart</button>
+<a href="products/lavender.html">More Info</a>
 </div>
 </div>
 
@@ -97,7 +64,8 @@ border-radius:10px;
 <div>
 <h2>Jasmine Bloom</h2>
 <p>A delicate jasmine fragrance that brings calm and elegance to your room. Ideal for evenings or meditation.</p>
-<a href="products/jasmine.html">Shop Now</a>
+<button onclick="addToCart('Jasmine Bloom',10)">Add To Cart</button>
+<a href="products/jasmine.html">More Info</a>
 </div>
 </div>
 
@@ -106,7 +74,8 @@ border-radius:10px;
 <div>
 <h2>Fresh Rose</h2>
 <p>Elegant rose aroma that freshens your room with floral elegance. Perfect for relaxing or gifting.</p>
-<a href="products/rose.html">Shop Now</a>
+<button onclick="addToCart('Fresh Rose',10)">Add To Cart</button>
+<a href="products/rose.html">More Info</a>
 </div>
 </div>
 
@@ -115,7 +84,8 @@ border-radius:10px;
 <div>
 <h2>Peppermint Fresh</h2>
 <p>Cool, energizing peppermint scent. Refreshes your space and boosts focus while studying or working.</p>
-<a href="products/peppermint.html">Shop Now</a>
+<button onclick="addToCart('Peppermint Fresh',10)">Add To Cart</button>
+<a href="products/peppermint.html">More Info</a>
 </div>
 </div>
 
@@ -124,7 +94,8 @@ border-radius:10px;
 <div>
 <h2>Bright Lemon</h2>
 <p>Lively citrus fragrance to brighten your room and mood. Perfect for kitchens or living spaces.</p>
-<a href="products/lemon.html">Shop Now</a>
+<button onclick="addToCart('Bright Lemon',10)">Add To Cart</button>
+<a href="products/lemon.html">More Info</a>
 </div>
 </div>
 
@@ -133,47 +104,48 @@ border-radius:10px;
 <div>
 <h2>Eucalyptus Breeze</h2>
 <p>Cool and refreshing eucalyptus scent that makes your space feel clean and spa-like.</p>
-<a href="products/eucalyptus.html">Shop Now</a>
+<button onclick="addToCart('Eucalyptus Breeze',10)">Add To Cart</button>
+<a href="products/eucalyptus.html">More Info</a>
 </div>
 </div>
 
 <!-- Best Seller Section -->
-<h2>Best Sellers</h2>
+<h2 style="text-align:center;margin-top:50px;">Best Sellers</h2>
 <div class="best-seller">
 <div class="card">
 <img src="images/lavender.jpg">
 <h3>Lavender Calm</h3>
 <p>$10</p>
-<a href="products/lavender.html">Shop Now</a>
+<button onclick="addToCart('Lavender Calm',10)">Add To Cart</button>
+<a href="products/lavender.html">More Info</a>
 </div>
-
 <div class="card">
 <img src="images/vanilla.jpg">
 <h3>Warm Vanilla</h3>
 <p>$10</p>
-<a href="products/vanilla.html">Shop Now</a>
+<button onclick="addToCart('Warm Vanilla',10)">Add To Cart</button>
+<a href="products/vanilla.html">More Info</a>
 </div>
-
 <div class="card">
 <img src="images/jasmine.jpg">
 <h3>Jasmine Bloom</h3>
 <p>$10</p>
-<a href="products/jasmine.html">Shop Now</a>
+<button onclick="addToCart('Jasmine Bloom',10)">Add To Cart</button>
+<a href="products/jasmine.html">More Info</a>
 </div>
 </div>
 
-</div>
-
+<script src="cart.js"></script>
 <script>
 // Scroll Animation
 const candles = document.querySelectorAll(".candle");
 window.addEventListener("scroll", () => {
-candles.forEach(c => {
-let top = c.getBoundingClientRect().top;
-if(top < window.innerHeight - 100){
-c.classList.add("show");
-}
-});
+  candles.forEach(c => {
+    let top = c.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      c.classList.add("show");
+    }
+  });
 });
 </script>
 
