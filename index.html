@@ -1,38 +1,166 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <title>Aroma Paradise</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family: Arial;
+background:#dff4ff;
+margin:0;
+}
+
+header{
+background:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+nav a{
+margin:10px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+.cart{
+background:#00aaff;
+color:white;
+padding:8px 14px;
+border-radius:20px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+button{
+background:#00aaff;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#008ecc;
+}
+
+</style>
 </head>
 
 <body>
 
+<header>
+
+<div class="logo">Aroma Paradise</div>
+
 <nav>
 <a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="scents.html">Our Scents</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
-
-<a class="cart" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
 </nav>
 
-<div class="hero">
+<div class="cart">🛒 Cart: <span id="cart-count">0</span></div>
 
-<h1>Aroma Paradise</h1>
+</header>
 
-<p>Hand poured candles designed for relaxation and comfort.</p>
+<section class="products">
 
-<a class="btn" href="shop.html">Shop Now</a>
-
+<div class="card">
+<img src="images/vanilla.jpg">
+<h3><a href="products/vanilla.html">Vanilla</a></h3>
+<p>$10</p>
+<button onclick="addToCart()">Add to Cart</button>
 </div>
 
-<footer>
-<p>© Aroma Paradise</p>
-</footer>
+<div class="card">
+<img src="images/lavender.jpg">
+<h3><a href="products/lavender.html">Lavender</a></h3>
+<p>$10</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
 
-<script src="cart.js"></script>
+<div class="card">
+<img src="images/rose.jpg">
+<h3><a href="products/rose.html">Rose</a></h3>
+<p>$10</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/peppermint.jpg">
+<h3><a href="products/peppermint.html">Peppermint</a></h3>
+<p>$10</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/lemon.jpg">
+<h3><a href="products/lemon.html">Lemon</a></h3>
+<p>$10</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/jasmine.jpg">
+<h3><a href="products/jasmine.html">Jasmine</a></h3>
+<p>$10</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/eucalyptus.jpg">
+<h3><a href="products/eucalyptus.html">Eucalyptus</a></h3>
+<p>$10</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+</section>
+
+<script>
+
+let cart = 0
+
+function addToCart(){
+cart++
+document.getElementById("cart-count").innerText = cart
+}
+
+</script>
 
 </body>
 </html>
