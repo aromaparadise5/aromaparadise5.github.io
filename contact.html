@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>Contact</title>
-
 <style>
-
-body{
-font-family:Arial;
-background:#dff4ff;
-padding:40px;
-}
-
-.box{
-background:white;
-padding:30px;
-border-radius:10px;
-max-width:600px;
-margin:auto;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
+body{font-family:Arial;background:#dff4ff;margin:0;padding:40px;}
+.container{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;}
+.card{background:white;padding:20px;border-radius:10px;box-shadow:0 5px 10px rgba(0,0,0,0.1);min-width:250px;text-align:center;}
+.card h3{margin-top:0;}
+.card a{text-decoration:none;color:#00aaff;font-weight:bold;}
 </style>
 </head>
-
 <body>
 
-<div class="box">
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="scents.html">Our Scents</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+</nav>
 
-<h1>Contact Aroma Paradise</h1>
+<h1>Contact Us</h1>
 
-<p>Email: aromaparadise9@gmail.com</p>
+<div class="container">
+<div class="card">
+<h3>Email</h3>
+<p><a href="mailto:aromaparadise9@gmail.com">aromaparadise9@gmail.com</a></p>
+</div>
 
-<p>Phone: 407-492-7529</p>
+<div class="card">
+<h3>Phone</h3>
+<p><a href="tel:4074927529">407-492-7529</a></p>
+</div>
 
-<p>Instagram: @aromainparadise</p>
+<div class="card">
+<h3>Instagram</h3>
+<p><a href="https://instagram.com/aromainparadise" target="_blank">@aromainparadise</a></p>
+</div>
 
-<p>TikTok: @aroma.paradise6</p>
-
+<div class="card">
+<h3>TikTok</h3>
+<p><a href="https://www.tiktok.com/@aroma.paradise6" target="_blank">@aroma.paradise6</a></p>
+</div>
 </div>
 
 </body>
