@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lavender Candle</title>
+
 <link rel="stylesheet" href="../style.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXX');
+</script>
+
 </head>
 
 <body>
 
-<nav>
+<nav class="navbar">
 <a href="../index.html">Home</a>
-<a href="../shop.html">Shop</a>
 <a href="../scents.html">Our Scents</a>
 <a href="../about.html">About</a>
 <a href="../contact.html">Contact</a>
-<a href="../cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
 </nav>
 
-<div class="container">
+<div style="max-width:800px;margin:auto;padding:40px;">
 
-<h1>Lavender Calm Candle</h1>
+<h1>Lavender Calm</h1>
 
-<img src="../images/lavender.jpg" width="350">
-
-<p>
-Lavender Calm is a relaxing floral fragrance designed to create a peaceful
-environment. The soft lavender aroma helps reduce stress and is perfect for
-bedrooms, study sessions, or winding down after a long day.
-</p>
+<img src="../images/lavender.jpg" style="width:100%;border-radius:10px;">
 
 <h2>$10</h2>
 
-<button onclick="addToCart('Lavender Candle',10)">Add To Cart</button>
+<p>
+Lavender Calm is one of our most relaxing scents. The soft floral lavender aroma helps reduce stress and creates a peaceful atmosphere perfect for bedrooms, studying, or winding down at night.
+</p>
 
-<h3>Customer Reviews</h3>
+<div class="product-info">
 
-<p>⭐️⭐️⭐️⭐️⭐️ “Amazing scent!”</p>
-<p>⭐️⭐️⭐️⭐️⭐️ “Very relaxing candle.”</p>
+<div class="info-block">
+<img src="../images/burn.jpg">
+<div>
+<h3>Long Burn Time</h3>
+<p>Burns for up to 10 hours allowing the calming lavender aroma to slowly fill your room.</p>
+</div>
+</div>
+
+<div class="info-block reverse">
+<img src="../images/tin.jpg">
+<div>
+<h3>Premium 4oz Tin</h3>
+<p>The durable metal tin protects the candle and makes it easy to take anywhere.</p>
+</div>
+</div>
+
+<div class="info-block">
+<img src="../images/wick.jpg">
+<div>
+<h3>Wooden Wick</h3>
+<p>The wooden wick produces a gentle crackling sound while the candle burns evenly.</p>
+</div>
+</div>
 
 </div>
 
-<script src="../cart.js"></script>
-
+</div>
 </body>
 </html>
