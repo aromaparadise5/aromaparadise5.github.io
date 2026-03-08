@@ -69,22 +69,34 @@ width:300px;
 border-radius:10px;
 }
 
-/* PRODUCT INFO ZIGZAG */
-
-.info-block{
-display:flex;
-align-items:center;
-gap:30px;
-margin:40px 0;
+/* Our Scents / Product Zig-Zag Section */
+.info-block {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* smaller gap fixes spacing */
+  margin: 40px 0; /* less vertical spacing */
 }
 
-.info-block.reverse{
-flex-direction:row-reverse;
+.info-block.reverse {
+  flex-direction: row-reverse;
 }
 
-.info-block img{
-width:250px;
-border-radius:10px;
+.info-block img {
+  width: 220px; /* smaller image to reduce spacing */
+  border-radius: 10px;
+}
+
+/* mobile fix */
+@media (max-width: 768px) {
+  .info-block {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 15px;
+    margin: 30px 0;
+  }
+  .info-block img {
+    width: 80%;
+  }
 }
 
 /* MOBILE */
