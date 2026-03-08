@@ -1,6 +1,29 @@
 body{
 font-family:Arial;
 margin:0;
+background:linear-gradient(to bottom,#e8f7ff,#ffffff);
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.candle{
+flex-direction:column !important;
+text-align:center;
+}
+
+.candle img{
+width:90%;
+}
+
+.navbar{
+flex-wrap:wrap;
+gap:15px;
+}
+
+body{
+font-family:Arial;
+margin:0;
 background:#e8f4ff;
 }
 
