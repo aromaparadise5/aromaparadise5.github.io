@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jasmine Candle</title>
+
 <link rel="stylesheet" href="../style.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5LDFPKBHE9');
+</script>
+
 </head>
 
 <body>
 
-<nav>
+<nav class="navbar">
 <a href="../index.html">Home</a>
-<a href="../shop.html">Shop</a>
 <a href="../scents.html">Our Scents</a>
 <a href="../about.html">About</a>
 <a href="../contact.html">Contact</a>
-<a href="../cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
 </nav>
 
-<div class="container">
+<div style="max-width:800px;margin:auto;padding:40px;">
 
-<h1>Jasmine Bloom Candle</h1>
+<h1>Jasmine Bloom</h1>
 
-<img src="../images/jasmine.jpg" width="350">
-
-<p>
-Jasmine Bloom offers a soft floral fragrance that creates a calm and elegant
-environment. The delicate aroma brings a relaxing and peaceful feeling to any
-space. This candle is perfect for evenings when you want a soothing atmosphere.
-</p>
+<img src="../images/jasmine.jpg" style="width:100%;border-radius:10px;">
 
 <h2>$10</h2>
 
-<button onclick="addToCart('Jasmine Candle',10)">Add To Cart</button>
+<p>
+Jasmine Bloom delivers a soft floral scent that creates a calm and elegant atmosphere. It’s perfect for relaxing evenings and adding a refreshing fragrance to any space.
+</p>
 
-<h3>Customer Reviews</h3>
+<div class="product-info">
 
-<p>⭐️⭐️⭐️⭐️⭐️ “Very calming scent.”</p>
-<p>⭐️⭐️⭐️⭐️⭐️ “Smells beautiful when lit.”</p>
+<div class="info-block">
+<img src="../images/burn.jpg">
+<div>
+<h3>Long Burn Time</h3>
+<p>Enjoy up to 10 hours of beautiful jasmine fragrance.</p>
+</div>
+</div>
+
+<div class="info-block reverse">
+<img src="../images/tin.jpg">
+<div>
+<h3>Premium 4oz Tin</h3>
+<p>A reusable metal tin container keeps your candle protected and portable.</p>
+</div>
+</div>
+
+<div class="info-block">
+<img src="../images/wick.jpg">
+<div>
+<h3>Wooden Wick</h3>
+<p>Natural wooden wick creates a cozy crackling sound while burning evenly.</p>
+</div>
+</div>
 
 </div>
 
-<script src="../cart.js"></script>
-
+</div>
 </body>
 </html>
